@@ -20,7 +20,7 @@ slide off into the worst reason for adding comments: to make a badly written pro
 - Everywhere else with snake_case_name and constants with UPPER_CASE_NAME
 
 ## Parentheses
-- Not use when call a method without params:
+- Don't use when call a method without params:
   
   ```
     @user.all()
@@ -64,4 +64,18 @@ slide off into the worst reason for adding comments: to make a badly written pro
     end
   ```
 
+## Folding code
+- if you are defining an empty, or perhaps a very, very simple class, you might fold the definition 
+onto a single line:
 
+  ```
+    class DocumentException < Exception; end
+  ```
+  You might also do the same thing with a trivial method:
+
+  ```
+    def method_to_be_overriden; end
+  ```
+
+- Blocks with one line use {}
+- Blocks with more then line use |do| end
