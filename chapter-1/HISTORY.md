@@ -78,4 +78,8 @@ onto a single line:
   ```
 
 - Blocks with one line use {}
-- Blocks with more then line use |do| end
+- Blocks with more then one line use |do| end
+
+## In the wild
+- Methods which return true/false yes/no end with ?
+- Methods which return something unexpected or dangerous end with !
