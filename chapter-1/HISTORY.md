@@ -22,46 +22,46 @@ slide off into the worst reason for adding comments: to make a badly written pro
 ## Parentheses
 - Not use when call a method without params:
   
-  '''
+  ```
     @user.all()
-  '''
+  ```
   
   try this way
 
-  '''
+  ```
     @user.all
-  '''
+  ```
 
 - the same case for method definition
 
-  '''
+  ```
     def words()
 
     end
-  '''
+  ```
 
   try
 
-  '''
+  ```
     def words
 
     end
-  '''
+  ```
 
 - and in statements like
 
-  '''
+  ```
     if (words.size > 100)
 
     end
-  '''
+  ```
 
   use
 
-  '''
+  ```
     if words.size > 100
 
     end
-  '''
+  ```
 
 
