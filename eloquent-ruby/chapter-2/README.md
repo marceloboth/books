@@ -47,7 +47,7 @@ to:
 ## Loops
 
 - Avoid ``for loop`` in arrays
-- Use each method, the reason is for avoidin one level of indirections. When for is called, 
+- Use each method, the reason is eliminating one level of indirection. When for is called, 
 Ruby will call inside the each method.
 
   ```
@@ -55,5 +55,30 @@ Ruby will call inside the each method.
 
     fonts.each do |font|
       puts font
+    end
+  ```
+
+## Case
+
+exemple one:
+
+  ```
+     author = case title
+              when 'War And Peace' the 'Tolstoy'
+              when 'Romeo And Juliet' then 'Shakespeare'
+              else "Don't know"
+              end
+  ```
+
+example two:
+
+  ```
+    case
+    when title == 'War And Peace'
+      puts 'Tolstoy'
+    when title == 'Romeo And Juliet'
+      puts 'Shakespeare'
+    else
+      puts 'Absolutely no idea...'
     end
   ```
