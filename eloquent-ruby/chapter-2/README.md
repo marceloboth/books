@@ -29,13 +29,31 @@ to:
 ## Modifier forms
 
 - unless:
+
   ``@title = new_title unless @read_only``
 
 - if:
+
   ``title = new_title if @writable``
 
 - while:
+
   ``document.print_next_page while document.pages_available?``
 
 - until:
+
   ``document.print_next_page until document.printed?``
+
+## Loops
+
+- Avoid ``for loop`` in arrays
+- Use each method, the reason is for avoidin one level of indirections. When for is called, 
+Ruby will call inside the each method.
+
+  ```
+    fonts = ['red', 'blue', 'white']
+
+    fonts.each do |font|
+      puts font
+    end
+  ```
