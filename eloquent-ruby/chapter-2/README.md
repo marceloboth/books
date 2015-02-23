@@ -26,3 +26,16 @@ to:
 
   ```
 
+## Modifier forms
+
+- unless:
+  ``@title = new_title unless @read_only``
+
+- if:
+  ``title = new_title if @writable``
+
+- while:
+  ``document.print_next_page while document.pages_available?``
+
+- until:
+  ``document.print_next_page until document.printed?``
