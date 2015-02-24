@@ -95,3 +95,12 @@ for nil explicitly.
     ``until(next_object = get_next_object) == nil``
     ``until(next_object = get_next_object).nil?``
 
+## Ternary operators
+
+- ``file = all ? 'specs' : 'latest_specs'``
+- and: ``@first_name = '' unless @first_name`` to ``@first_name ||= ''``
+- Translated into English, the expansion says “Set the new value of @first_name to
+the old value of @first_name, unless that is nil, in which case set it to the empty
+string.”
+- Don’t try to use ||= to initialize things to booleans.
+
