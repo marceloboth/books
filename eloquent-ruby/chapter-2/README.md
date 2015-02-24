@@ -82,3 +82,16 @@ example two:
       puts 'Absolutely no idea...'
     end
   ```
+
+## Staying out of trouble
+
+- Only ``false`` and ``nil`` are treated as false. Everything else are true.
+- Because that, using ``nil`` in comparations is dangerous.
+- If you are looking for nil and there is any possibility of false turning up, then look
+for nil explicitly.
+
+  like:
+  
+    ``until(next_object = get_next_object) == nil``
+    ``until(next_object = get_next_object).nil?``
+
