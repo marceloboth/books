@@ -65,3 +65,17 @@ load_font( :name => 'times roman', :size => 12 )
 load_font :name => 'times roman', :size => 12
 ```
 
+## Running Through Your Collection
+
+The way of running through an Array Collection:
+
+```
+words.each { |word| puts word }
+```
+
+Hashes also come with a have a `each` method:
+
+```
+movie = { title: '2001', genre: 'sci fi', rating: 10 }
+movie.each { |entry| pp entry }
+```
