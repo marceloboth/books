@@ -131,3 +131,9 @@ Arrays and Hashes are ordered by default, even when an existing value is changed
 Ruby Collection are powerful, that often there is no practical reason to create a custom-tailored collection simply to get some specialized feature.
 
 All things being equal, Ruby programmers actually prefer to work with generic collections. To the Ruby way of thinking, one less class is one less thing to go wrong.
+
+## Staying out of trouble
+
+Never change a Collection from a underneath method.
+
+`In coding, as in carpentry, you need the right tool for the job.`
