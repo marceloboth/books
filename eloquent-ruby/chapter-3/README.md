@@ -79,3 +79,44 @@ Hashes also come with a have a `each` method:
 movie = { title: '2001', genre: 'sci fi', rating: 10 }
 movie.each { |entry| pp entry }
 ```
+
+.find_index:
+
+```
+words.find_index { |this_word| word == this_word }
+```
+
+.map: Map takes a block and runs through the collection calling the block for each element.
+
+```
+words.map { |word| word.size }
+```
+
+.inject: Inject passes in two arguments to the block: Along with each element, you get the current result—the current sum if you are adding up all of the word lengths. Each time inject calls the block, it replaces the current result with the return value of the previous call to the block. When inject runs out of elements, it returns the result as its return value.
+
+```
+total = words.inject(0.0){ |result, word| word.size + result}
+```
+
+If you don’t supply an initial value, inject will skip calling the block for the first element of the array and simply use that element as the initial result.
+
+## Beware the Bang!
+
+Using `!` method changes the collection and methods without `!` makes a copy of the collection don't changing the properly collection.
+
+This only return a copy of the array in a reverse mode:
+
+```
+a = [1, 2, 3]
+a.reverse => [3,2,1]
+a => [1, 2, 3]
+```
+
+This will change the entire collection:
+
+```
+a = [1, 2, 3]
+a.reverse! => [3, 2, 1]
+a => [3, 2, 1]
+
+Be sure you know what a method is going to do to your collection before you call it with `!` (Bang).
