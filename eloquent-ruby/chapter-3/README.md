@@ -118,5 +118,16 @@ This will change the entire collection:
 a = [1, 2, 3]
 a.reverse! => [3, 2, 1]
 a => [3, 2, 1]
+```
 
 Be sure you know what a method is going to do to your collection before you call it with `!` (Bang).
+
+## Rely on the Order of Your Hashes
+
+Arrays and Hashes are ordered by default, even when an existing value is changed.
+
+## In the wild
+
+Ruby Collection are powerful, that often there is no practical reason to create a custom-tailored collection simply to get some specialized feature.
+
+All things being equal, Ruby programmers actually prefer to work with generic collections. To the Ruby way of thinking, one less class is one less thing to go wrong.
